@@ -1,43 +1,43 @@
-const sunIcon =document.querySelector('.sun')
-const moonIcon = document.querySelector('.moon')
+const sunIcon = document.querySelector('.sun');
+const moonIcon = document.querySelector('.moon');
 
-
-const userTheme =localStorage.getItem('theme')
-const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+const userTheme = localStorage.getItem('theme');
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 const iconToggle = () => {
-    sunIcon.classList.toggle("display-none")
-    moonIcon.classList.toggle("display-none")
-}
+    sunIcon.classList.toggle("display-none");
+    moonIcon.classList.toggle("display-none");
+};
 
 const themeCheck = () => {
-    if(userTheme === "dark" ||(!userTheme && systemTheme)){
-        document.documentElement.classList.add("dark")
+    if (userTheme === "dark" || (!userTheme && systemTheme)) {
+        document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
+        sunIcon.classList.remove("display-none");
         return;
     }
-    sunIcon.classList.add("display-none")
-}
+    sunIcon.classList.add("display-none");
+    moonIcon.classList.remove("display-none");
+};
 
 const themeSwitch = () => {
-    if(document.documentElement.classList.contains("dark")){
+    if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light")
+        localStorage.setItem("theme", "light");
         iconToggle();
         return;
     }
     document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "light")
-}
+    localStorage.setItem("theme", "dark");
+    iconToggle();
+};
 
-sunIcon.addEventListener("click",() => {
-    themeSwitch()
-})
+sunIcon.addEventListener("click", () => {
+    themeSwitch();
+});
 
 moonIcon.addEventListener("click", () => {
-    themeSwitch()
-})
+    themeSwitch();
+});
 
-themeCheck()
-
-
+themeCheck();
