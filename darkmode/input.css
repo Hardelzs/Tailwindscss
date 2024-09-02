@@ -6,3 +6,7 @@
 .display-none{
     @apply hidden;
 }
+
+.radial-blue{
+    background: radial-gradient(lightyellow, skyblue);
+}
