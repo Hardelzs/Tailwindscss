@@ -10,3 +10,9 @@
 .radial-blue{
     background: radial-gradient(lightyellow, skyblue);
 }
+
+@layer utilities{
+    .section-min-height{
+        min-height: cal(100vh -68px);
+    }
+}
