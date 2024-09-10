@@ -23,8 +23,8 @@
                 </button>
                 <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
                     <a href="#space" class="hover:opacity-90">Our SpaceShip</a>
-                    <a href="" class="hover:opacity-90">Testimonials</a>
-                    <a href="" class="hover:opacity-90">Contact US</a>
+                    <a href="#testimonies" class="hover:opacity-90">Testimonials</a>
+                    <a href="#contact" class="hover:opacity-90">Contact US</a>
                 </nav>
             </div>
 
@@ -33,14 +33,13 @@
 
     <!-- for mobile view  -->
      <nav class="relative container mx-auto p-6">
-        <div class="hidden ">
+        <div class="hidden transition-duration-500 " id="mobile">
             <div id="menu"
-                class="absolute grid self-center flex-col text-center items-center space-y-6 font-bold bg-white left-2 right-2 drop-shadow-md">
-                <a href="">Pricing</a>
-                <a href="">Product</a>
-                <a href="">Pricing</a>
-                <a href="">Pricing</a>
-                <a href="">Pricing</a>
+                class="absolute grid self-center flex-col text-center items-center space-y-6 font-bold bg-white left-2 right-2 drop-shadow-md transition-duration-500">
+                <a href="#home">Home</a>
+                <a href="#space">Our SpaceShip</a>
+                <a href="#testimonies">Testimonials</a>
+                <a href="#contact">Contact Us</a>
             </div>
         </div>
      </nav>
@@ -104,7 +103,7 @@
 
         <hr class="mx-auto bg-black dark:bg-white w-1/2">
 
-        <section class="p-6 my-12 scroll-mt-20">
+        <section class="p-6 my-12 scroll-mt-20" id="testimonies">
             <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
                 Textimonials
             </h2>
@@ -157,7 +156,7 @@
 
         <hr class="mx-auto bg-black dark:bg-white w-1/2">
 
-        <section class="p-6 my-12 scroll-mt-16">
+        <section class="p-6 my-12 scroll-mt-16" id="contact">
             <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
                 Contact Us
             </h2>

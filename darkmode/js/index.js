@@ -42,20 +42,24 @@
 
 // themeCheck();
 
-
+const mobile = document.getElementById('mobile')
 const hamburger = document.getElementById('hamburg')
 const cancel = document.getElementById('cancel')
 
 cancel.addEventListener('click', () => {
     const hamburg = document.getElementById('hamburg')
     const cancel = document.getElementById('cancel')
+    const mobile = document.getElementById('mobile')
     cancel.style.display = 'none'
     hamburg.style.display = 'block'
+    mobile.style.display = 'none'
 })
 
 hamburger.addEventListener('click', () => {
     const hamburg = document.getElementById('hamburg')
     const cancel = document.getElementById('cancel')
+    const mobile =document.getElementById('mobile')
     cancel.style.display = 'block'
     hamburg.style.display = 'none'
+    mobile.style.display = 'block'
 })
